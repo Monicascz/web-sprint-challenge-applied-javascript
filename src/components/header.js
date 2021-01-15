@@ -34,7 +34,7 @@ header.appendChild(spanTemp)
 
 return header
 
-}; console.log(Header({title: "test", date: "today", temp: "75"}))
+}; 
 
 const headerAppender = (selector) => {
   // TASK 2
@@ -43,6 +43,7 @@ const headerAppender = (selector) => {
   // It should create a header using the Header component above, passing arguments of your choosing.
   // It should append the header to the element in the DOM that matches the given selector.
   //
+  Header({title: "Lambda Times", date: "January 20th, 2021", temp: "26°"})
 }
 
 export { Header, headerAppender }
