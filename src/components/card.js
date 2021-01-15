@@ -47,7 +47,12 @@ const Card = (article) => {
   imgCont.append(imgTag)
   authorDiv.appendChild(span)
 cardCont.appendChild(cardDiv)
+
+cardDiv.addEventListener('click', (event)=>{
+  console.log(`you have clicked the ${article.headline} card!`)
+})
   
+return cardDiv;
 };
 
 
@@ -63,7 +68,6 @@ const cardAppender = (selector) => {
 
   axios.get('https://lambda-times-api.herokuapp.com/articles')
     .then((response)=>{
-      console.log(response.data.articles)
       const bsArticles = response.data.articles.bootstrap;
       bsArticles.forEach((bsArticle)=>{
         Card(bsArticle)
